@@ -21,7 +21,7 @@ Also, Code is generated from Herts Service interface.
 build.gradle
 ```bash
 dependencies {
-    implementation 'org.hertsstack:herts-codegen:1.0.0'
+    {{< var.inline >}}{{ $.Site.Params.hertsCodegen }}{{< / var.inline >}}
 }
 ```
 
@@ -31,7 +31,7 @@ You can implement plane Java main.
 ```java
 public class Main {
     public static void main(String[] args) {
-        CodeGenEngine codeGenEngine = CodeGenBuilder.builder()
+        HertsCodeGenEngine codeGenEngine = HertsCodeGenBuilder.builder()
                 .hertsService(HttpCodegenTestService.class) // Your Herts Interface
                 .lang(CodeGenLang.Typescript)
                 .build();

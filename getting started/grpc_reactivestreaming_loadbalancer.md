@@ -24,11 +24,11 @@ build.gradle
 ```bash
 def grpcVersion = 'x.x.x'
 dependencies {
-    implementation 'org.hertsstack:herts-core:1.0.0'
-    implementation 'org.hertsstack:herts-rpc:1.0.0'
-    implementation 'org.hertsstack:herts-rpc-client:1.0.0'
-    implementation 'org.hertsstack:herts-broker:1.0.0'
-    implementation 'org.hertsstack:herts-broker-redis:1.0.0'
+    {{< var.inline >}}{{ $.Site.Params.hertsCore }}{{< / var.inline >}}
+    {{< var.inline >}}{{ $.Site.Params.hertsRpc}}{{< / var.inline >}}
+    {{< var.inline >}}{{ $.Site.Params.hertsRpcClient }}{{< / var.inline >}}
+    {{< var.inline >}}{{ $.Site.Params.hertsBroker }}{{< / var.inline >}}
+    {{< var.inline >}}{{ $.Site.Params.hertsBrokerRedis }}{{< / var.inline >}}
 
     // Redis
     implementation 'redis.clients:jedis:4.3.1'
