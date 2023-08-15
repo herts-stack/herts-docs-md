@@ -23,8 +23,8 @@ build.gradle
 ```bash
 def grpcVersion = 'x.x.x'
 dependencies {
-    implementation 'org.hertsstack:herts-core:1.0.0'
-    implementation 'org.hertsstack:herts-http:1.0.0'
+    {{< var.inline >}}{{ $.Site.Params.hertsCore }}{{< / var.inline >}}
+    {{< var.inline >}}{{ $.Site.Params.hertsHttp }}{{< / var.inline >}}
     implementation 'org.hertsstack:herts-http-client:1.0.0'
 
     implementation "io.grpc:grpc-protobuf:${grpcVersion}"
@@ -140,7 +140,7 @@ public class Main {
 
         HertsHttpClient client = HertsHttpClient
                 .builder("localhost")
-                .registerHertService(HttpService.class)
+                .registerHertsService(HttpService.class)
                 .secure(false)
                 .build();
 

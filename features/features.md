@@ -7,6 +7,10 @@ weight: -20
 
 {{< toc >}}
 
+# Herts stack
+
+<img src="/img16.png" width="600">
+
 ## Types of APIs that can be implemented
 
 * gRPC Unary communication
@@ -51,3 +55,14 @@ By turning on the metrics function, you can collect metrics exclusively for **Pr
     * per definition Method
 * JVM metrics
 * Machine metrics
+
+## Gateway between gRPC and HTTP
+
+It supports Gateway for easy connection to grpc.
+
+## HTTP Client Code generation
+
+Http Client code generation for Typescript from `HertsService interface`.
+
+Supports codegen  
+* Typescript

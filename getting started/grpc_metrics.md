@@ -21,10 +21,10 @@ build.gradle
 ```bash
 def grpcVersion = 'x.x.x'
 dependencies {
-    implementation 'org.hertsstack:herts-core:1.0.0'
+    {{< var.inline >}}{{ $.Site.Params.hertsCore }}{{< / var.inline >}}
     implementation 'org.hertsstack:herts-metrics:1.0.0'
-    implementation 'org.hertsstack:herts-rpc:1.0.0'
-    implementation 'org.hertsstack:herts-rpc-client:1.0.0'
+    {{< var.inline >}}{{ $.Site.Params.hertsRpc}}{{< / var.inline >}}
+    {{< var.inline >}}{{ $.Site.Params.hertsRpcClient }}{{< / var.inline >}}
 
     implementation "io.grpc:grpc-protobuf:${grpcVersion}"
     implementation "io.grpc:grpc-services:${grpcVersion}"

@@ -18,9 +18,9 @@ gRPC Unary Server and Client.
 build.gradle
 ```bash
 dependencies {
-    implementation 'org.hertsstack:herts-core:1.0.0'
-    implementation 'org.hertsstack:herts-rpc:1.0.0'
-    implementation 'org.hertsstack:herts-rpc-client:1.0.0'
+    {{< var.inline >}}{{ $.Site.Params.hertsCore }}{{< / var.inline >}}
+    {{< var.inline >}}{{ $.Site.Params.hertsRpc}}{{< / var.inline >}}
+    {{< var.inline >}}{{ $.Site.Params.hertsRpcClient }}{{< / var.inline >}}
 }
 ```
 
