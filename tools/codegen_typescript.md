@@ -213,7 +213,7 @@ export class CreateRequest {
         arg0 : CustomModel,
     ) {
         const payloads = new Array<CreatePayload>();
-        const payload0 = new CreatePayload ('arg0', arg0, 'org.hertsstack.example.codegents.CustomModel');
+        const payload0 = new CreatePayload ('arg0', arg0);
         payloads.push(payload0);
         return new CreateRequest (payloads);
     };
@@ -231,24 +231,20 @@ export class HelloWorldRequest {
 }
 
 export class CreatePayload {
-    constructor(keyName: string, value: any, classInfo: string) {
+    constructor(keyName: string, value: any) {
         this.keyName = keyName;
         this.value = value;
-        this.classInfo = classInfo;
     }
     private keyName: string;
     private value: any;
-    private classInfo: string;
 }
 export class HelloWorldPayload {
-    constructor(keyName: string, value: any, classInfo: string) {
+    constructor(keyName: string, value: any) {
         this.keyName = keyName;
         this.value = value;
-        this.classInfo = classInfo;
     }
     private keyName: string;
     private value: any;
-    private classInfo: string;
 }
 ```
 
